@@ -162,20 +162,22 @@ body{
     display: flex;
     flex-grow: 0.5;
     width: 280px;
-    padding: 20px;
+    padding: 24px;
     margin: 10px;
     justify-content: flex-start;
     flex-direction: column;
     background: #ffffff;
     border: 1px solid transparent;
     border-radius: 5px;
+    transition: all 0.7s ease-in-out 0s;
 
 
 }
 
 .skills div:hover{
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    /* background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
     cursor: pointer;
+    width: 300px;
 
 }
 
@@ -193,6 +195,19 @@ body{
         width: 50px;
         height: 50px;
 }
+.skills img{
+        width: 50px;
+        height: 50px;
+}
+#data img{
+        width: 60px;
+        height: 60px;
+}
+#video img{
+        width: 60px;
+        height: 60px;
+}
+
 
 .socialsholder{
     display: flex;
