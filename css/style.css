@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: Nunito, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.8s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* for 320px */
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 2px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.navbar h1{
+    font-size: 1rem;
+    align-self: center;
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+   /*background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); ;
+*/
+   }
+
+.navbar ul{
+    white-space: nowrap;
+    max-width: 90%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 5px 8px;
+    margin:auto;
+    font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.825rem;
+
+}
+
+.navbar a:hover{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-decoration: underline;
+    color: #00FFFF;
+}
+.imgholder{
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hello{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 1.5rem;
+}
+
+.imgholder h1 span{
+    color: #00FFFF;
+}
+.imgholder h1:first-of-type{
+    font-size: 22px;
+}
+
+
+
+.imgholder h1:last-of-type{
+    font-size: 18px;
+}
+
+.imgholder img{
+    width: 320px;
+    display: flex;
+    flex-grow: 0.3;
+}
+
+.Aboutme{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.Aboutme h3:first-of-type{
+    align-self: center;
+    margin: 10px 0px;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition-duration: 1s;
+
+}
+
+.Aboutme h3:last-of-type{
+    align-self: center;
+    font-weight:700;
+    font-size: 15px;
+    color: #00FFFF;
+
+}
+.Aboutme p{
+    margin: 5px 20px;
+    font-weight: 200;
+}
+
+.skillsetholder{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsetholder h2{
+    align-self: center;
+    padding: 15px 0px;
+    font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+
+.skillsetholder h2:hover{
+    color: #00FFFF;
+}
+
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skills div{
+    display: flex;
+    flex-grow: 0.5;
+    width: 280px;
+    padding: 20px;
+    margin: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+
+}
+
+.skills div:hover{
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    cursor: pointer;
+
+}
+
+.skills h6{
+    font-weight: 700px;
+    font-size: 15px;
+    margin: 6px 0px;
+}
+
+.skills h6,.skills p{
+    color: black;
+}
+
+.skills svg{
+        width: 50px;
+        height: 50px;
+}
+
+.socialsholder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 10px;
+    
+}
+
+.socialsholder a{
+    padding:10px 30px;
+    background-color: #ffffff;
+    display: block;
+    
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.socialsholder svg{
+    width: 50px;
+    height: 50px;
+}
+.socialsholder div{
+    margin: 10px 15px;
+}
+.socialsholder a:hover{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); 
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content section {
+    flex: 1;
+    margin: 0 10px;
+}
+.footer-content ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer-content a {
+    color: #00f;
+    padding: 0px 5px;
+}
+.footer-bottom {
+    text-align: center;
+    /*margin-top: 20px;*/
+    font-size: 14px;
+}
+
+/*M edia Queries*/
+
+@media screen and (max-width:503px){
+    .imgholder{
+        justify-content: flex-end;
+    }
+    .hello{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1000px){
+    .navbar{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navbar ul{
+        width: 35rem;
+    }
+    .navbar a{
+        font-size: 0.925rem;
+    }
+    .navbar  h1{
+        font-size: 1.5rem;
+    }
+
+    .skillsetholder{
+        margin: 0px 15px;
+        margin-top: 25px;
+    }
+
+}
