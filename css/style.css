@@ -130,7 +130,6 @@ body{
 .Aboutme p{
     margin: 5px 20px;
     font-weight: 200;
-    font-size: calc(1rem, 7rem, 10rem);
 }
 
 .skillsetholder{
@@ -178,6 +177,9 @@ body{
 .skills div:hover{
     /* background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
     cursor: pointer;
+    transform: scale(1.1);
+    background-color: #ededed;
+    box-shadow: 0px 0px 20px #3e3e3e;
 
 }
 
@@ -220,15 +222,18 @@ body{
 
 .socialsholder a{
     padding:10px 25px;
-    background-color: #ffffff;
     display: block;
     
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 35px;
 }
-.socialsholder svg{
+.socialsholder img{
     width: 50px;
     height: 50px;
+}
+.socialsholder img:nth-of-type(3){
+    width: 100px;
+    height: 100px;
 }
 .socialsholder div{
     margin: 10px 15px;
@@ -240,7 +245,7 @@ body{
 
 footer {
     margin-top: 25px;
-    background-color: #333;
+    background-color: #737373;
     color: #fff;
     padding: 20px;
 }
