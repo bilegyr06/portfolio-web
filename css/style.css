@@ -67,8 +67,8 @@ body{
 }
 
 .navbar a:hover{
-    border: 1px solid transparent;
-    border-radius: 5px;
+    /* border: 1px solid transparent;
+    border-radius: 5px; */
     text-decoration: underline;
     color: #00FFFF;
 }
@@ -161,16 +161,15 @@ body{
 .skills div{
     display: flex;
     width: 280px;
-    flex-grow: 1;
     padding: 24px;
     margin: 10px;
     justify-content: flex-start;
     flex-direction: column;
     background: #ffffff;
     border: 1px solid transparent;
-    border-radius: 5px;
-    transition: all 0.7s ease-in-out 0s;
-
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out 0s;
+    
 
 }
 
@@ -178,7 +177,7 @@ body{
     /* background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
     cursor: pointer;
     transform: scale(1.1);
-    background-color: #ededed;
+    background-color: #00ffffe0;
     box-shadow: 0px 0px 20px #3e3e3e;
 
 }
@@ -187,11 +186,19 @@ body{
     font-weight: 700px;
     font-size: 15px;
     margin: 6px 0px;
+    color: black;
+    transition: all 0.4s ease-in-out 0s;
 }
 
-.skills h6,.skills p{
+.skills p{
     color: black;
+    transition: all 0.4s ease-in-out 0s;
+    
 }
+.skills div:hover h6, .skills div:hover p{
+    color: #FFFFFF;
+}
+
 
 .skills svg{
         width: 50px;
@@ -201,15 +208,6 @@ body{
         width: 50px;
         height: 50px;
 }
-#data img{
-        width: 60px;
-        height: 60px;
-}
-#video img{
-        width: 60px;
-        height: 60px;
-}
-
 
 .socialsholder{
     display: flex;
@@ -221,33 +219,46 @@ body{
 }
 
 .socialsholder a{
-    padding:10px 25px;
+    padding:10px 10px;
     display: block;
-    
     border: 1px solid transparent;
     border-radius: 35px;
+
 }
-.socialsholder img{
+.socialsholder svg{
     width: 50px;
     height: 50px;
+    transition: all 0.4s ease-in-out 0s;
 }
-.socialsholder img:nth-of-type(3){
-    width: 100px;
-    height: 100px;
-}
+
 .socialsholder div{
-    margin: 10px 15px;
+    margin: 10px 15px;   
 }
-/* .socialsholder a:hover{
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); 
-} */
+
+.socialsholder path{
+    fill: #FFFFFF;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+.socialsholder div:hover svg{
+    transform: scale(1.1);
+}
+
+.socialsholder div:hover path{
+    fill: #00FFFF;
+}
 
 
 footer {
     margin-top: 25px;
-    background-color: #737373;
     color: #fff;
     padding: 20px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(41, 46, 54, 0.75);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .footer-content {
     display: flex;
@@ -255,21 +266,9 @@ footer {
 }
 .footer-content section {
     flex: 1;
-    margin: 0 10px;
-}
-.footer-content ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    justify-content: center;
+    margin: 0px 10px;
 }
 
-.footer-content a {
-    color: #00f;
-    padding: 0px 5px;
-}
 .footer-bottom {
     text-align: center;
     /*margin-top: 20px;*/
