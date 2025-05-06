@@ -129,7 +129,8 @@ body{
 }
 .Aboutme p{
     margin: 5px 20px;
-    font-weight: 200;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .skillsetholder{
@@ -155,12 +156,14 @@ body{
 .skills{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:center
 }
 
 .skills div{
     display: flex;
-    width: 280px;
+    min-width: 280px;
+    max-width: 1400px;
+    flex: 1;
     padding: 24px;
     margin: 10px;
     justify-content: flex-start;
@@ -193,6 +196,7 @@ body{
 .skills p{
     color: black;
     transition: all 0.4s ease-in-out 0s;
+    line-height: 1.5;
     
 }
 .skills div:hover h6, .skills div:hover p{
@@ -302,6 +306,9 @@ footer {
         font-size: 1.5rem;
     }
 
+    .Aboutme p{
+        margin: 5px 50px;
+    }
     .skillsetholder{
         margin: 0px 15px;
         margin-top: 25px;
