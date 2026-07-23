@@ -15,6 +15,13 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/images/photo_2025-01-08_12-31-24%20-%20Copy.png" />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

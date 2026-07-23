@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   articles,
   books,
@@ -23,7 +24,35 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+type Theme = "light" | "dark";
+
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const savedTheme = window.localStorage.getItem("portfolio-theme");
+
+  if (savedTheme === "light" || savedTheme === "dark") {
+    return savedTheme;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
 function App() {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const isDark = theme === "dark";
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem("portfolio-theme", theme);
+  }, [theme]);
+
+  function toggleTheme() {
+    setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
+  }
+
   return (
     <>
       <header className="site-header">
@@ -37,6 +66,18 @@ function App() {
             </a>
           ))}
         </nav>
+        <button
+          className="theme-toggle"
+          type="button"
+          aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+          aria-pressed={isDark}
+          onClick={toggleTheme}
+        >
+          <span className="theme-toggle__track" aria-hidden="true">
+            <span className="theme-toggle__thumb" />
+          </span>
+          <span className="theme-toggle__label">{isDark ? "Light" : "Dark"}</span>
+        </button>
       </header>
 
       <main id="top">
