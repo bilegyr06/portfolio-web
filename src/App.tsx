@@ -15,6 +15,7 @@ import { Card } from "./components/Card";
 import { Section } from "./components/Section";
 import { TagList } from "./components/TagList";
 import { Timeline } from "./components/Timeline";
+import heroPortrait from "./assets/hero-portrait.jpg";
 
 const navItems = [
   { label: "Journey", href: "#journey" },
@@ -101,7 +102,7 @@ function App() {
             </div>
           </div>
           <div className="hero__media reveal reveal--delay">
-            <img src="/images/photo_2025-01-08_12-31-24.jpg" alt="Portrait of Ayodeji Ajayi" />
+            <img src={heroPortrait} alt="Portrait of Ayodeji Ajayi" />
           </div>
         </section>
 
