@@ -8,6 +8,7 @@ import {
   journey,
   learning,
   projects,
+  thinkingCapabilities,
   technologyGroups,
 } from "./data/portfolio";
 import { Badge } from "./components/Badge";
@@ -86,11 +87,11 @@ function App() {
           <div className="hero__content reveal">
             <p className="eyebrow">Software engineering, AI, and product thinking</p>
             <h1 id="hero-title">
-              I build from curiosity, then shape that curiosity into useful products.
+              I follow curiosity into hard problems, then build software to make them clearer.
             </h1>
             <p className="hero__summary">
-              I am Ayodeji Ajayi, an entrepreneurial software engineer interested in Artificial Intelligence, Natural
-              Language Processing, and the patient work of understanding a problem before deciding what to build.
+              I am Ayodeji Ajayi. I enjoy learning deeply, writing to understand, and building thoughtful software
+              systems around AI, Natural Language Processing, and products that help people make better decisions.
             </p>
             <div className="button-row" aria-label="Primary actions">
               <a className="button button--primary" href="#projects">
@@ -143,8 +144,8 @@ function App() {
                       <dd>{project.approach}</dd>
                     </div>
                     <div>
-                      <dt>Outcome</dt>
-                      <dd>{project.outcome}</dd>
+                      <dt>What I learned</dt>
+                      <dd>{project.learned}</dd>
                     </div>
                   </dl>
                   <TagList tags={project.technologies} />
@@ -186,10 +187,27 @@ function App() {
           id="build"
           eyebrow="What I Build"
           title="Capabilities before tools."
-          intro="The work I enjoy most starts with a meaningful problem and ends with a product, system, or experiment that makes the problem clearer."
+          intro="The work I enjoy most starts with a meaningful problem and ends with a product, system, or experiment that makes the problem easier to act on."
         >
           <div className="card-grid">
             {buildCapabilities.map((capability) => (
+              <Card key={capability.title}>
+                <span className="card-number">{capability.index}</span>
+                <h3>{capability.title}</h3>
+                <p>{capability.description}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        <Section
+          id="thinking"
+          eyebrow="How I Think"
+          title="The habits underneath the work."
+          intro="I am drawn to the part of building where research, reading, product judgment, and engineering have to meet."
+        >
+          <div className="card-grid card-grid--thinking">
+            {thinkingCapabilities.map((capability) => (
               <Card key={capability.title}>
                 <span className="card-number">{capability.index}</span>
                 <h3>{capability.title}</h3>
@@ -266,7 +284,7 @@ function App() {
                 <h3>{article.title}</h3>
                 <p>{article.preview}</p>
                 <span className="muted">
-                  {article.date} · {article.readingTime}
+                  {article.date} | {article.readingTime}
                 </span>
               </Card>
             ))}
