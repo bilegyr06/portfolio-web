@@ -16,7 +16,7 @@ type Project = {
   visualLabel: string;
   problem: string;
   approach: string;
-  outcome: string;
+  learned: string;
   technologies: string[];
   actions: ProjectAction[];
 };
@@ -60,37 +60,44 @@ export const journey: JourneyItem[] = [
   {
     period: "Early curiosity",
     title: "Games made technology feel alive",
-    description: "I became interested in software through interactive systems that responded to decisions, rules, and imagination.",
+    description:
+      "I first became interested in software through games: systems with rules, feedback, imagination, and the feeling that a decision could change what happened next.",
   },
   {
     period: "Foundation",
     title: "Mathematics sharpened the questions",
-    description: "Math gave me a language for patterns, structure, and the discipline of slowing down before reaching for an answer.",
+    description:
+      "Mathematics gave me a language for patterns and structure. More importantly, it taught me to slow down and understand why something works before trying to use it.",
   },
   {
     period: "Study",
     title: "Computer Science turned curiosity into craft",
-    description: "Studying computing helped me connect ideas to systems and understand how software can become a reliable tool.",
+    description:
+      "Studying computer science helped me connect abstract ideas to working systems and made software feel less like magic and more like a tool I could reason about.",
   },
   {
     period: "Discovery",
     title: "Artificial Intelligence widened the horizon",
-    description: "AI made me more interested in systems that can reason with messy information and support human decisions.",
+    description:
+      "AI made me interested in systems that can work with messy information, reveal patterns, and support better decisions without pretending the world is simple.",
   },
   {
     period: "Focus",
     title: "Natural Language Processing became especially compelling",
-    description: "NLP sits close to how people search, write, ask, explain, and understand, which makes it a rich area for useful products.",
+    description:
+      "NLP sits close to how people search, write, ask, explain, and understand. That makes it a rich place to build products around real human behavior.",
   },
   {
     period: "Direction",
     title: "Entrepreneurship shifted the question",
-    description: "I started caring less about building impressive things and more about discovering problems worth solving well.",
+    description:
+      "Entrepreneurship changed the question from \"Can I build this?\" to \"Is this a problem worth solving, and do I understand it well enough yet?\"",
   },
   {
     period: "Now",
     title: "Building meaningful products",
-    description: "The work now is to combine learning, engineering, and product judgment into software that clarifies real problems.",
+    description:
+      "The work now is to combine learning, engineering, writing, and product judgment into software that makes difficult problems clearer.",
   },
 ];
 
@@ -101,12 +108,12 @@ export const projects: Project[] = [
     summary: "A commitment intelligence platform for understanding recurring financial obligations before they consume future income.",
     visualLabel: "Commitment awareness",
     problem:
-      "People often know individual subscriptions, but miss the larger pattern of memberships, renewals, fees, donations, and installment commitments.",
+      "People can usually name a few subscriptions, but miss the wider pattern: memberships, renewals, service fees, donations, trials, installments, and quiet obligations that keep claiming future income.",
     approach:
-      "Identify likely commitments from trusted evidence, ask users to confirm them, then turn scattered obligations into a clear dashboard.",
-    outcome:
-      "The project is shaping my thinking around trust, financial visibility, and product decisions that make future consequences easier to see.",
-    technologies: ["Product discovery", "AI-assisted workflows", "Email evidence", "Dashboard design"],
+      "I am exploring how trusted evidence, confirmation flows, and careful classification can turn scattered financial signals into a dashboard people can actually trust.",
+    learned:
+      "SUBs_TRACKt is teaching me that the real product is not subscription tracking. It is helping people see commitments early enough to make better decisions.",
+    technologies: ["Product discovery", "NLP", "AI-assisted workflows", "Email evidence", "Dashboard design"],
     actions: [
       { label: "Read Case Study", href: "#projects" },
       { label: "View Project", href: "#contact" },
@@ -117,10 +124,12 @@ export const projects: Project[] = [
     status: "Prototype",
     summary: "An early exploration into making housing opportunities easier to trust and evaluate.",
     visualLabel: "Trust and discovery",
-    problem: "Reliable accommodation search can be fragmented, uncertain, and difficult to verify before making decisions.",
-    approach: "Use the prototype to understand how trust, transparency, and clearer information could improve the search process.",
-    outcome:
-      "This project changed how I build. It taught me to spend more time understanding the problem before rushing into implementation.",
+    problem:
+      "Finding reliable accommodation can be fragmented and stressful, especially when listings are hard to verify and important details are scattered.",
+    approach:
+      "I used the prototype to think through trust, clearer information, and how a better search flow might reduce uncertainty before someone makes a decision.",
+    learned:
+      "This project changed how I build. I learned that understanding the problem deeply is usually harder, and more valuable, than writing the first version of the software.",
     technologies: ["Problem discovery", "Prototype design", "Information architecture"],
     actions: [
       { label: "Read Case Study", href: "#projects" },
@@ -132,10 +141,12 @@ export const projects: Project[] = [
     status: "Completed",
     summary: "An experimental summarization system combining multiple NLP techniques.",
     visualLabel: "Language experiments",
-    problem: "Automatic summarization can lose context, readability, or both when it compresses longer material.",
-    approach: "Experiment with combining summarization approaches and compare how different techniques affect the final output.",
-    outcome:
-      "The work strengthened my interest in NLP and reinforced the value of experimentation when working with language systems.",
+    problem:
+      "Summarization looks simple until a system starts removing the parts that gave the original text its meaning, tone, or usefulness.",
+    approach:
+      "I experimented with different summarization techniques and compared how each one affected context, readability, and the shape of the final output.",
+    learned:
+      "The work strengthened my interest in NLP because language systems force you to test assumptions. A technically correct output can still fail the reader.",
     technologies: ["Python", "NLP", "Summarization", "Experimentation"],
     actions: [
       { label: "Read Case Study", href: "#projects" },
@@ -150,7 +161,7 @@ export const experiences: Experience[] = [
     organization: "Octave Analytics",
     period: "Internship",
     impact:
-      "Worked with real-world datasets and learned how much the quality of analysis depends on careful, reliable preparation before a dashboard is ever built.",
+      "Worked with messy real-world data and learned how much useful analysis depends on careful cleaning, repeatable preparation, and reliable handoffs before a dashboard is ever built.",
     technologies: ["Python", "Pandas", "ETL", "Power BI", "Data cleaning"],
   },
 ];
@@ -159,7 +170,7 @@ export const buildCapabilities: TextCard[] = [
   {
     index: "01",
     title: "AI Applications",
-    description: "Products that use intelligent systems to make information easier to understand, organize, or act on.",
+    description: "Products that use intelligent systems to make information easier to understand, organize, and act on.",
   },
   {
     index: "02",
@@ -178,13 +189,36 @@ export const buildCapabilities: TextCard[] = [
   },
   {
     index: "05",
-    title: "Data Systems",
+    title: "Data Pipelines",
     description: "Pipelines and data preparation workflows that support analysis and product decisions.",
   },
+];
+
+export const thinkingCapabilities: TextCard[] = [
   {
-    index: "06",
-    title: "Problem Discovery",
-    description: "Research and observation that help define the right thing to build before implementation starts.",
+    index: "01",
+    title: "Product Discovery",
+    description: "Starting with the problem, the user, and the evidence before deciding what the software should become.",
+  },
+  {
+    index: "02",
+    title: "Research",
+    description: "Reading, comparing ideas, and looking for the assumptions underneath a problem.",
+  },
+  {
+    index: "03",
+    title: "Technical Writing",
+    description: "Explaining concepts clearly enough that the gaps in my own understanding become visible.",
+  },
+  {
+    index: "04",
+    title: "Learning",
+    description: "Building from first principles and staying with difficult material long enough for it to become usable.",
+  },
+  {
+    index: "05",
+    title: "Systems Thinking",
+    description: "Looking at incentives, workflows, constraints, and consequences rather than only the interface in front of me.",
   },
 ];
 
@@ -210,19 +244,19 @@ export const books: Book[] = [
     initials: "AI",
     title: "Artificial Intelligence",
     author: "Current technical reading",
-    takeaway: "Strengthening the foundations behind the systems I want to build.",
+    takeaway: "Strengthening the foundations behind the intelligent systems I want to build.",
   },
   {
     initials: "TH",
     title: "Theology and Philosophy Notes",
     author: "Ongoing study",
-    takeaway: "Reading that shapes how I think about meaning, discipline, and human questions.",
+    takeaway: "Reading that quietly shapes how I think about meaning, discipline, integrity, and human questions.",
   },
   {
     initials: "PE",
     title: "Product and Entrepreneurship",
     author: "Ongoing reading",
-    takeaway: "Ideas that help me think beyond implementation and toward durable value.",
+    takeaway: "Ideas that push me to think beyond implementation and toward durable value.",
   },
 ];
 
