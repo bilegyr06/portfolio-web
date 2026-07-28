@@ -8,11 +8,11 @@ import {
   journey,
   learning,
   projects,
-  thinkingCapabilities,
   technologyGroups,
 } from "./data/portfolio";
 import { Badge } from "./components/Badge";
 import { Card } from "./components/Card";
+import { Header } from "./components/Header";
 import { Section } from "./components/Section";
 import { TagList } from "./components/TagList";
 import { Timeline } from "./components/Timeline";
@@ -56,42 +56,20 @@ function App() {
   }
 
   return (
-    <>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Ayodeji Ajayi home">
-          Ayodeji Ajayi
-        </a>
-        <nav className="site-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <button
-          className="theme-toggle"
-          type="button"
-          aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-          aria-pressed={isDark}
-          onClick={toggleTheme}
-        >
-          <span className="theme-toggle__track" aria-hidden="true">
-            <span className="theme-toggle__thumb" />
-          </span>
-          <span className="theme-toggle__label">{isDark ? "Light" : "Dark"}</span>
-        </button>
-      </header>
+    <>      
+      <Header brandName="Ayodeji Ajayi" brandHref="#top" navItems={navItems} isDark = {isDark} onToggleTheme={toggleTheme} />
 
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero__content reveal">
             <p className="eyebrow">Software engineering, AI, and product thinking</p>
             <h1 id="hero-title">
-              I follow curiosity into hard problems, then build software to make them clearer.
+              Building thoughtful software.
             </h1>
+            <h2 className="hero__subtitle">I'm curious about difficult problems.</h2>
             <p className="hero__summary">
-              I am Ayodeji Ajayi. I enjoy learning deeply, writing to understand, and building thoughtful software
-              systems around AI, Natural Language Processing, and products that help people make better decisions.
+              I'm Ayodeji Ajayi. 
+              I build software, enjoy reading, playing football manager and I spend a lot of time thinking about products, AI, and interesting problems worth solving.
             </p>
             <div className="button-row" aria-label="Primary actions">
               <a className="button button--primary" href="#projects">
@@ -111,7 +89,7 @@ function App() {
           id="journey"
           eyebrow="My Journey"
           title="A path shaped by curiosity, learning, and a growing interest in meaningful products."
-          intro="This is not a list of achievements. It is the progression of questions that kept becoming more interesting."
+          intro="I am not trying to list achievements here. I want to show how my questions kept getting deeper and more interesting over time."
         >
           <Timeline items={journey} />
         </Section>
@@ -120,7 +98,7 @@ function App() {
           id="projects"
           eyebrow="Featured Projects"
           title="Projects as evidence of thinking."
-          intro="Each project is framed around the problem, the approach, and what it taught me. The technology matters, but it comes after the reasoning."
+          intro="I frame each project around the problem, the approach, and what I learned from it. The technology matters, but it comes after the reasoning."
         >
           <div className="project-grid">
             {projects.map((project) => (
@@ -144,8 +122,8 @@ function App() {
                       <dd>{project.approach}</dd>
                     </div>
                     <div>
-                      <dt>What I learned</dt>
-                      <dd>{project.learned}</dd>
+                      <dt>Outcome</dt>
+                      <dd>{project.outcome}</dd>
                     </div>
                   </dl>
                   <TagList tags={project.technologies} />
@@ -187,7 +165,7 @@ function App() {
           id="build"
           eyebrow="What I Build"
           title="Capabilities before tools."
-          intro="The work I enjoy most starts with a meaningful problem and ends with a product, system, or experiment that makes the problem easier to act on."
+          intro="The work I enjoy most starts with a meaningful problem and ends with a product, system, or experiment that makes the problem clearer."
         >
           <div className="card-grid">
             {buildCapabilities.map((capability) => (
@@ -201,27 +179,10 @@ function App() {
         </Section>
 
         <Section
-          id="thinking"
-          eyebrow="How I Think"
-          title="The habits underneath the work."
-          intro="I am drawn to the part of building where research, reading, product judgment, and engineering have to meet."
-        >
-          <div className="card-grid card-grid--thinking">
-            {thinkingCapabilities.map((capability) => (
-              <Card key={capability.title}>
-                <span className="card-number">{capability.index}</span>
-                <h3>{capability.title}</h3>
-                <p>{capability.description}</p>
-              </Card>
-            ))}
-          </div>
-        </Section>
-
-        <Section
           id="technologies"
           eyebrow="Technologies I Use"
           title="Tools that support the work."
-          intro="This section stays intentionally quiet. The tools are useful because they help turn ideas into reliable systems."
+          intro="I keep this section quiet because the tools only matter when they help turn ideas into reliable systems."
         >
           <div className="technology-grid">
             {technologyGroups.map((group) => (
@@ -253,7 +214,7 @@ function App() {
           id="reading"
           eyebrow="Currently Reading"
           title="Books that shape the way I think."
-          intro="Reading belongs on this portfolio because ideas often become better engineering decisions later."
+          intro="I include reading here because ideas from books often show up later in the way I make engineering decisions."
         >
           <div className="book-grid">
             {books.map((book) => (
@@ -284,7 +245,7 @@ function App() {
                 <h3>{article.title}</h3>
                 <p>{article.preview}</p>
                 <span className="muted">
-                  {article.date} | {article.readingTime}
+                  {article.date} · {article.readingTime}
                 </span>
               </Card>
             ))}
@@ -294,8 +255,8 @@ function App() {
         <Section
           id="beyond"
           eyebrow="Beyond Software"
-          title="The interests around the work."
-          intro="A quieter section for the things that keep curiosity alive outside the editor."
+          title="What keeps me curious outside the work."
+          intro="This is the quieter part of the page, the things that keep me curious outside the editor."
         >
           <div className="interest-row">
             {interests.map((interest) => (
