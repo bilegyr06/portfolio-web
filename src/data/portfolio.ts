@@ -97,7 +97,7 @@ export const journey: JourneyItem[] = [
     period: "Now",
     title: "Building meaningful products",
     description:
-      "The work now is to combine learning, engineering, writing, and product judgment into software that makes difficult problems clearer.",
+      "The work now is to combine learning, engineering, writing, and product judgment into software that solves difficult problems.",
   },
 ];
 
@@ -157,12 +157,12 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    role: "Data Intern",
+    role: "Data Science Intern",
     organization: "Octave Analytics",
-    period: "Internship",
+    period: "6 months",
     impact:
       "Worked with messy real-world data and learned how much useful analysis depends on careful cleaning, repeatable preparation, and reliable handoffs before a dashboard is ever built.",
-    technologies: ["Python", "Pandas", "ETL", "Power BI", "Data cleaning"],
+    technologies: ["Python", "Pandas", "ETL", "Power BI", "Data cleaning", "Web scraping", "ML"],
   },
 ];
 
@@ -225,9 +225,9 @@ export const thinkingCapabilities: TextCard[] = [
 export const technologyGroups: TechnologyGroup[] = [
   { category: "Frontend", items: ["React", "TypeScript", "HTML", "CSS", "Responsive UI"] },
   { category: "Backend", items: ["Python", "FastAPI", "APIs", "Authentication"] },
-  { category: "AI / ML", items: ["NLP", "scikit-learn", "spaCy", "NLTK", "Summarization"] },
+  { category: "AI / ML", items: ["NLP", "scikit-learn", "spaCy", "NLTK", "TensorFlow"] },
   { category: "Data", items: ["Pandas", "ETL", "Data cleaning", "Power BI"] },
-  { category: "Tools", items: ["Git", "GitHub", "Vite", "Product notes", "Research docs"] },
+  { category: "Tools", items: ["Git", "GitHub", "Vite"] },
 ];
 
 export const learning: TextCard[] = [
@@ -242,20 +242,20 @@ export const learning: TextCard[] = [
 export const books: Book[] = [
   {
     initials: "AI",
-    title: "Artificial Intelligence",
-    author: "Current technical reading",
+    title: "Natural Lnaguage processing with python",
+    author: "Steven Bird, Ewan Klein, Edward Loper",
     takeaway: "Strengthening the foundations behind the intelligent systems I want to build.",
   },
   {
     initials: "TH",
-    title: "Theology and Philosophy Notes",
-    author: "Ongoing study",
+    title: "Redeeming Producivity",
+    author: "Reagan Rose",
     takeaway: "Reading that quietly shapes how I think about meaning, discipline, integrity, and human questions.",
   },
   {
     initials: "PE",
-    title: "Product and Entrepreneurship",
-    author: "Ongoing reading",
+    title: "James Dyson: Against the Odds",
+    author: "James Dyson",
     takeaway: "Ideas that push me to think beyond implementation and toward durable value.",
   },
 ];
@@ -284,4 +284,4 @@ export const articles: Article[] = [
   },
 ];
 
-export const interests = ["Formula One", "Books", "Theology", "Philosophy", "Football Manager", "Cars", "Gaming"];
+export const interests = ["Formula One", "Books", "Theology", "Philosophy", "Football Manager", "Gaming", "Problem Identification", "Solution Provision"];
