@@ -1,6 +1,4 @@
-type TagListProps = {
-  tags: string[];
-};
+import type { TagListProps } from "../data/portfolio";
 
 export function TagList({ tags }: TagListProps) {
   return (

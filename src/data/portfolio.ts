@@ -4,6 +4,10 @@ export type JourneyItem = {
   description: string;
 };
 
+export type TagListProps = {
+  tags: string[];
+};
+
 type ProjectAction = {
   label: string;
   href: string;
@@ -108,11 +112,14 @@ export const projects: Project[] = [
     summary: "A commitment intelligence platform for understanding recurring financial obligations before they consume future income.",
     visualLabel: "Commitment awareness",
     problem:
-      "People can usually name a few subscriptions, but miss the wider pattern: memberships, renewals, service fees, donations, trials, installments, and quiet obligations that keep claiming future income.",
+    "***",
+      // "People can usually name a few subscriptions, but miss the wider pattern: memberships, renewals, service fees, donations, trials, installments, and quiet obligations that keep claiming future income.",
     approach:
-      "I am exploring how trusted evidence, confirmation flows, and careful classification can turn scattered financial signals into a dashboard people can actually trust.",
+    "***",
+      // "I am exploring how trusted evidence, confirmation flows, and careful classification can turn scattered financial signals into a dashboard people can actually trust.",
     learned:
-      "SUBs_TRACKt is teaching me that the real product is not subscription tracking. It is helping people see commitments early enough to make better decisions.",
+      // "SUBs_TRACKt is teaching me that the real product is not subscription tracking. It is helping people see commitments early enough to make better decisions.",
+      "***",
     technologies: ["Product discovery", "NLP", "AI-assisted workflows", "Email evidence", "Dashboard design"],
     actions: [
       { label: "Read Case Study", href: "#projects" },
@@ -223,10 +230,10 @@ export const thinkingCapabilities: TextCard[] = [
 ];
 
 export const technologyGroups: TechnologyGroup[] = [
-  { category: "Frontend", items: ["React", "TypeScript", "HTML", "CSS", "Responsive UI"] },
-  { category: "Backend", items: ["Python", "FastAPI", "APIs", "Authentication"] },
-  { category: "AI / ML", items: ["NLP", "scikit-learn", "spaCy", "NLTK", "TensorFlow"] },
-  { category: "Data", items: ["Pandas", "ETL", "Data cleaning", "Power BI"] },
+  { category: "Frontend", items: ["React", "TypeScript", "HTML", "CSS"] },
+  { category: "Backend", items: ["Python", "FastAPI", "SQL", "Alembic", "PostreSQL"] },
+  { category: "AI / ML", items: ["scikit-learn", "spaCy", "NLTK", "TensorFlow", "Pytorch"] },
+  { category: "Data", items: ["Pandas", "Power BI"] },
   { category: "Tools", items: ["Git", "GitHub", "Vite"] },
 ];
 
@@ -241,8 +248,8 @@ export const learning: TextCard[] = [
 
 export const books: Book[] = [
   {
-    initials: "AI",
-    title: "Natural Lnaguage processing with python",
+    initials: "NLTK",
+    title: "Natural Language processing with python",
     author: "Steven Bird, Ewan Klein, Edward Loper",
     takeaway: "Strengthening the foundations behind the intelligent systems I want to build.",
   },
@@ -253,7 +260,7 @@ export const books: Book[] = [
     takeaway: "Reading that quietly shapes how I think about meaning, discipline, integrity, and human questions.",
   },
   {
-    initials: "PE",
+    initials: "JD",
     title: "James Dyson: Against the Odds",
     author: "James Dyson",
     takeaway: "Ideas that push me to think beyond implementation and toward durable value.",

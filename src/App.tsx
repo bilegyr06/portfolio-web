@@ -17,6 +17,7 @@ import { Section } from "./components/Section";
 import { TagList } from "./components/TagList";
 import { Timeline } from "./components/Timeline";
 import heroPortrait from "./assets/hero-portrait.jpg";
+import { IconList } from "./components/IconList";
 
 const navItems = [
   { label: "Journey", href: "#journey" },
@@ -64,9 +65,9 @@ function App() {
           <div className="hero__content reveal">
             <p className="eyebrow">Software engineering, AI, and product thinking</p>
             <h1 id="hero-title">
-              Building thoughtful software.
+              Understanding Problems.
             </h1>
-            <h2 className="hero__subtitle">I'm curious about difficult problems.</h2>
+            <h2 className="hero__subtitle">Building Software.</h2>
             <p className="hero__summary">
               I'm Ayodeji Ajayi. 
               I build software, enjoy reading, playing football manager and I spend a lot of time thinking about products, AI, and interesting problems worth solving.
@@ -123,7 +124,7 @@ function App() {
                     </div>
                     <div>
                       <dt>Outcome</dt>
-                      <dd>{project.outcome}</dd>
+                      <dd>{project.learned}</dd>
                     </div>
                   </dl>
                   <TagList tags={project.technologies} />
@@ -188,7 +189,7 @@ function App() {
             {technologyGroups.map((group) => (
               <Card key={group.category}>
                 <h3>{group.category}</h3>
-                <TagList tags={group.items} />
+                <IconList tags={group.items} />
               </Card>
             ))}
           </div>
