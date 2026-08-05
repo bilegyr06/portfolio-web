@@ -18,6 +18,7 @@ import { TagList } from "./components/TagList";
 import { Timeline } from "./components/Timeline";
 import heroPortrait from "./assets/hero-portrait.jpg";
 import { IconList } from "./components/IconList";
+// import GmailIcon from "@iconify-react/simple-icons/gmail"
 
 const navItems = [
   { label: "Journey", href: "#journey" },
@@ -90,7 +91,7 @@ function App() {
           id="journey"
           eyebrow="My Journey"
           title="A path shaped by curiosity, learning, and a growing interest in meaningful products."
-          intro="I am not trying to list achievements here. I want to show how my questions kept getting deeper and more interesting over time."
+          intro="Don't worry, I'm not trying to list achievements here. I want to show you how my questions kept getting deeper and more interesting over time."
         >
           <Timeline items={journey} />
         </Section>
@@ -98,7 +99,7 @@ function App() {
         <Section
           id="projects"
           eyebrow="Featured Projects"
-          title="Projects as evidence of thinking."
+          title="Projects that show my thought process."
           intro="I frame each project around the problem, the approach, and what I learned from it. The technology matters, but it comes after the reasoning."
         >
           <div className="project-grid">
@@ -144,8 +145,8 @@ function App() {
         <Section
           id="experience"
           eyebrow="Experience"
-          title="Practical work, viewed through impact."
-          intro="Experience belongs here when it explains responsibility, judgment, and growth."
+          title="Practical work I've done"
+          intro="Experience I've built up working with companies"
         >
           <div className="stack">
             {experiences.map((experience) => (
@@ -183,7 +184,7 @@ function App() {
           id="technologies"
           eyebrow="Technologies I Use"
           title="Tools that support the work."
-          intro="I keep this section quiet because the tools only matter when they help turn ideas into reliable systems."
+          intro="Tools only matter when they help turn ideas into reliable systems."
         >
           <div className="technology-grid">
             {technologyGroups.map((group) => (
@@ -257,7 +258,7 @@ function App() {
           id="beyond"
           eyebrow="Beyond Software"
           title="What keeps me curious outside the work."
-          intro="This is the quieter part of the page, the things that keep me curious outside the editor."
+          intro="These are the things that keep me curious and entertained outside my editor."
         >
           <div className="interest-row">
             {interests.map((interest) => (
@@ -273,6 +274,7 @@ function App() {
           intro="I am interested in conversations around AI, NLP, entrepreneurship, product building, learning, research, and difficult problems worth understanding."
         >
           <div className="contact-panel">
+            {/* <GmailIcon/ > */}
             <a className="button button--primary" href="mailto:ayodejioluwatobi2@gmail.com">
               Email Me
             </a>

@@ -65,23 +65,23 @@ export const journey: JourneyItem[] = [
     period: "Early curiosity",
     title: "Games made technology feel alive",
     description:
-      "I first became interested in software through games: systems with rules, feedback, imagination, and the feeling that a decision could change what happened next.",
+      "I got interested in software through games: systems with rules, feedback, imagination, and the feeling that a decision could change what happened next.",
   },
   {
     period: "Foundation",
-    title: "Mathematics sharpened the questions",
+    title: "Mathematics sharpened my questions",
     description:
       "Mathematics gave me a language for patterns and structure. More importantly, it taught me to slow down and understand why something works before trying to use it.",
   },
   {
     period: "Study",
-    title: "Computer Science turned curiosity into craft",
+    title: "Computer Science turned my curiosity into craft",
     description:
       "Studying computer science helped me connect abstract ideas to working systems and made software feel less like magic and more like a tool I could reason about.",
   },
   {
     period: "Discovery",
-    title: "Artificial Intelligence widened the horizon",
+    title: "Artificial Intelligence widened my horizon",
     description:
       "AI made me interested in systems that can work with messy information, reveal patterns, and support better decisions without pretending the world is simple.",
   },
@@ -89,7 +89,7 @@ export const journey: JourneyItem[] = [
     period: "Focus",
     title: "Natural Language Processing became especially compelling",
     description:
-      "NLP sits close to how people search, write, ask, explain, and understand. That makes it a rich place to build products around real human behavior.",
+      "NLP sits close to how people search, write, ask, explain, and understand. That makes it a rich place to build products around real human behavior. It really stood out from the rest of the class to me.",
   },
   {
     period: "Direction",
@@ -99,7 +99,7 @@ export const journey: JourneyItem[] = [
   },
   {
     period: "Now",
-    title: "Building meaningful products",
+    title: "Building valuable products",
     description:
       "The work now is to combine learning, engineering, writing, and product judgment into software that solves difficult problems.",
   },
@@ -109,7 +109,8 @@ export const projects: Project[] = [
   {
     name: "SUBs_TRACKt",
     status: "Active",
-    summary: "A commitment intelligence platform for understanding recurring financial obligations before they consume future income.",
+    summary: "***",
+    // "A commitment intelligence platform for understanding recurring financial obligations before they consume future income.",
     visualLabel: "Commitment awareness",
     problem:
     "***",
@@ -239,7 +240,7 @@ export const technologyGroups: TechnologyGroup[] = [
 
 export const learning: TextCard[] = [
   { title: "Software Architecture", note: "Designing systems that stay understandable as they grow." },
-  { title: "Advanced React", note: "Building interfaces with stronger composition, data flow, and accessibility habits." },
+  { title: "Advanced React & Next.js", note: "Building interfaces with stronger composition, data flow, and accessibility habits." },
   { title: "FastAPI", note: "Creating backend services that are clear, typed, and product-ready." },
   { title: "NLP Systems", note: "Moving from isolated experiments toward useful language-driven product workflows." },
   { title: "Product Engineering", note: "Connecting technical decisions to user value, tradeoffs, and product direction." },
@@ -253,6 +254,7 @@ export const books: Book[] = [
     author: "Steven Bird, Ewan Klein, Edward Loper",
     takeaway: "Strengthening the foundations behind the intelligent systems I want to build.",
   },
+
   {
     initials: "TH",
     title: "Redeeming Producivity",
@@ -265,6 +267,12 @@ export const books: Book[] = [
     author: "James Dyson",
     takeaway: "Ideas that push me to think beyond implementation and toward durable value.",
   },
+  {
+    initials: "AH",
+    title: "Atomic Habits",
+    author: "James Clear",
+    takeaway: "Cues acted on overtime build habits. Environment is the invisible hand that shapes human behaviour"
+  }
 ];
 
 export const articles: Article[] = [
