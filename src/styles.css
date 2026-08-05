@@ -573,8 +573,8 @@ p {
   min-height: 270px;
 }
 
-.interest-row,
-.contact-panel {
+.contact-panel,
+.interest-row {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -586,6 +586,32 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-large);
   padding: 28px;
+}
+
+.contact-link {
+  align-items: center;
+  margin-right: 20px;
+  color: var(--color-ink);
+  display: inline-flex;
+  height: 46px;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+  width: 46px;
+}
+
+.contact-link:hover {
+  border-color: var(--color-hover-border);
+  transform: translateY(-1px);
+}
+
+.contact-link:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 .reveal {

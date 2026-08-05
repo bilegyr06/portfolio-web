@@ -18,7 +18,9 @@ import { TagList } from "./components/TagList";
 import { Timeline } from "./components/Timeline";
 import heroPortrait from "./assets/hero-portrait.jpg";
 import { IconList } from "./components/IconList";
-// import GmailIcon from "@iconify-react/simple-icons/gmail"
+import GmailIcon from "@iconify-react/simple-icons/gmail";
+import GitHubIcon from "@iconify-react/simple-icons/github";
+import LinkedInIcon from "@iconify-react/simple-icons/linkedin";
 
 const navItems = [
   { label: "Journey", href: "#journey" },
@@ -90,8 +92,8 @@ function App() {
         <Section
           id="journey"
           eyebrow="My Journey"
-          title="A path shaped by curiosity, learning, and a growing interest in meaningful products."
-          intro="Don't worry, I'm not trying to list achievements here. I want to show you how my questions kept getting deeper and more interesting over time."
+          title="Following curiosity from games to AI, entrepreneurship, and thoughtful software."
+          intro="This isn't a timeline of achievements. It's the story of how one question led to another, and how each step shaped the way I think about solving problems."
         >
           <Timeline items={journey} />
         </Section>
@@ -274,15 +276,30 @@ function App() {
           intro="I am interested in conversations around AI, NLP, entrepreneurship, product building, learning, research, and difficult problems worth understanding."
         >
           <div className="contact-panel">
-            {/* <GmailIcon/ > */}
-            <a className="button button--primary" href="mailto:ayodejioluwatobi2@gmail.com">
-              Email Me
+            <a
+              className="contact-link"
+              href="mailto:ayodejioluwatobi2@gmail.com"
+              aria-label="Email Ayodeji Ajayi"
+            >
+              <GmailIcon className="tag-list__icon" aria-hidden="true" focusable="false" />
             </a>
-            <a className="button button--secondary" href="https://github.com/bilegyr06?tab=repositories">
-              GitHub
+            <a
+              className="contact-link"
+              href="https://github.com/bilegyr06?tab=repositories"
+              aria-label="View GitHub profile"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon className="tag-list__icon" aria-hidden="true" focusable="false" />
             </a>
-            <a className="button button--secondary" href="https://www.linkedin.com/in/ayodeji-ajayi-83006a287/">
-              LinkedIn
+            <a
+              className="contact-link"
+              href="https://www.linkedin.com/in/ayodeji-ajayi-83006a287/"
+              aria-label="View LinkedIn profile"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon className="tag-list__icon" aria-hidden="true" focusable="false" />
             </a>
           </div>
         </Section>
